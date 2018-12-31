@@ -15,26 +15,10 @@ class Home extends Component {
   } */
 
   componentDidMount(){
-     /* this.setState({
-        products: [
-            {productName: "สลัดผัก", unitPrice: 120, thumbnail: '/images/product/1.jpg'},
-            {productName: "ไก่ทอด", unitPrice: 90, thumbnail: '/images/product/2.jpg'},
-            {productName: "บิงชู", unitPrice: 200, thumbnail: '/images/product/3.jpg'},
-            {productName: "เฟรนฟราย", unitPrice: 140, thumbnail: '/images/product/4.jpg'},
-            {productName: "เค้ก 3 ชั้น", unitPrice: 200, thumbnail: '/images/product/5.jpg'},
-            {productName: "กาแฟ เฮลตี้ฟู๊ด", unitPrice: 140, thumbnail: '/images/product/6.jpg'}
-        ]
-    }); 
-
+     /* 
     fetch("http://localhost:3009/products", {method: "GET"})
     .then(res => res.json())
-    .then(res => {this.setState({products: res})})
-
-    axios.get("http://localhost:3010/products")
-         .then(res => {
-             console.log(res.data);
-             this.setState({products: res.data})
-         }); */
+    .then(res => {this.setState({products: res})}) */
         
     this.props.productFetch();
   }
