@@ -22,7 +22,7 @@ class ProductList extends Component {
     render(){
         return (
             <div className="row">
-                {this.ShowProducts()}
+            {this.ShowProducts()}
             </div>
         )
     }
