@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default ({ input, label, type, name, required, meta: {error, touched} }) => {
-    //console.log(meta);
+export default ({ input, label, type, name, required, meta: { error, touched } }) => {
+    //console.log("Show error from meta ", meta);
     return (
         <div className="form-group">
             <label className="title">{label}</label>

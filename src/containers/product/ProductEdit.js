@@ -15,10 +15,14 @@ class ProductEdit extends Component {
         }
     }
 
+    createNewProduct(product){
+        console.log("submit " + product);
+        //productUpdate(products.id, product) ;
+    }
+
     render() {
         const { formValues, match, products, productCreate, productUpdate } = this.props;
-        /* console.log(match);
-        console.log(formValues); */
+        //console.log(match);
 
         return(
             <div>
@@ -33,6 +37,7 @@ class ProductEdit extends Component {
                             </div>
                         )
                         }
+                     
                         <ProductForm onProductSubmit={() => productCreate(formValues)} />
                     </div>
                 )}
@@ -58,7 +63,7 @@ class ProductEdit extends Component {
 
 const mapStateToProps = ({ form, products }) => {
     //console.log("Hello ",products);
-    return { formValues: form.ProductForm ? form.ProductForm.values : null, products };
+    return { formValues: form.productForm ? form.productForm.values : null, products };
 }
 
 export default connect(mapStateToProps, { productCreate, productUpdate, productFetchById })(ProductEdit);

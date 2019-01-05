@@ -39,15 +39,17 @@ class ProductForm extends Component {
     }
 }
 
-const validate = (values) => {
-    //console.log(values);
+function validate(values){
+    //console.log("Validate ProductForm ", values);
     const errors = {};
     productFormField.forEach(({name, required}) => {
         if(!values[name] && required){
-            errors[name] = "กรุณากรอกชื่อสินค้าด้วยครับ"
+            errors[name] = "กรุณากรอกข้อมูลด้วยครับ"
         }
     })
 
+    // คืนค่า error ไปให้ redux-form ทำการจักการส่งไปให้ Field-component 
+    // จากนั้นฝั่ง form-component รับค่าจาก error เป็น meta
     return errors;
 }
 
